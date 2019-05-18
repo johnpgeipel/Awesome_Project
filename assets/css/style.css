@@ -2,12 +2,82 @@
     margin: 0px 10px 0px 10px;
 }
 
+body {
+    background: url("../images/table2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .jumbotron {
     background: url("../images/jumbotron.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    color: white
+    color: white;
+    border-bottom: white 0.75px solid;
 }
+
+.jumbotron h1 {
+    font-size: 70px;
+    font-family: 'Kodchasan', sans-serif;
+    text-shadow: darkslategray 0px 0px 5px;
+    
+}
+
+.jumbotron h3 {
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    text-shadow: darkslategray 0px 0px 6px;
+    
+}
+
+.card-header, .weatherCard {
+    background-color: rgb(59, 53, 47);
+    color: white;
+    font-family: 'Kodchasan', sans-serif;
+    padding-top: 10px;
+}
+
+
+
+.weatherCard {
+    border-radius: 5px;
+    border: white 0.75px solid;
+    /* margin: 0px 5px 15px 5px; */
+    
+}
+
+.col-md-8 {
+    /* padding: 0px 10px 15px 10px; */
+}
+
+
+
+
+
+.btn-link {
+    color: white;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 20px;
+    
+}
+
+.btn-link:hover {
+    color: rgba(242, 159, 4, 1);
+}
+
+#submit-btn {
+    background-color: rgb(59, 53, 47);
+    border-top: rgba(255, 255, 255, 0.493) 2px solid;
+    border-bottom: rgba(255, 255, 255, 0.219) 1px solid;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 15px;
+}
+
+#submit-btn:hover {
+    background-color: rgba(242, 159, 4, 1);
+ }
+
 
 /* Color Theme Swatches in Hex */
 /* .Turmeric-powder-in-wooden-bowl-and-fresh-turmeric-root-on-grey-concrete-background.-Banner-with-copy-space-1-hex { color: #EFF2F2; }
