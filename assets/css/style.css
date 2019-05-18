@@ -1,3 +1,25 @@
 .row {
     margin: 0px 10px 0px 10px;
 }
+
+.jumbotron {
+    background: url("../images/jumbotron.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white
+}
+
+/* Color Theme Swatches in Hex */
+/* .Turmeric-powder-in-wooden-bowl-and-fresh-turmeric-root-on-grey-concrete-background.-Banner-with-copy-space-1-hex { color: #EFF2F2; }
+.Turmeric-powder-in-wooden-bowl-and-fresh-turmeric-root-on-grey-concrete-background.-Banner-with-copy-space-2-hex { color: #F29F04; }
+.Turmeric-powder-in-wooden-bowl-and-fresh-turmeric-root-on-grey-concrete-background.-Banner-with-copy-space-3-hex { color: #BF5B03; }
+.Turmeric-powder-in-wooden-bowl-and-fresh-turmeric-root-on-grey-concrete-background.-Banner-with-copy-space-4-hex { color: #8C3502; }
+.Turmeric-powder-in-wooden-bowl-and-fresh-turmeric-root-on-grey-concrete-background.-Banner-with-copy-space-5-hex { color: #3F1C0F; } */
+
+/* Color Theme Swatches in RGBA */
+.Turmeric-powder-in-wooden-bowl-and-fresh-turmeric-root-on-grey-concrete-background.-Banner-with-copy-space-1-rgba { color: rgba(239, 242, 242, 1); }
+.Turmeric-powder-in-wooden-bowl-and-fresh-turmeric-root-on-grey-concrete-background.-Banner-with-copy-space-2-rgba { color: rgba(242, 159, 4, 1); }
+.Turmeric-powder-in-wooden-bowl-and-fresh-turmeric-root-on-grey-concrete-background.-Banner-with-copy-space-3-rgba { color: rgba(191, 91, 3, 1); }
+.Turmeric-powder-in-wooden-bowl-and-fresh-turmeric-root-on-grey-concrete-background.-Banner-with-copy-space-4-rgba { color: rgba(140, 53, 2, 1); }
+.Turmeric-powder-in-wooden-bowl-and-fresh-turmeric-root-on-grey-concrete-background.-Banner-with-copy-space-5-rgba { color: rgba(63, 28, 15, 1); }
+
