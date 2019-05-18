@@ -37,9 +37,17 @@ body {
     padding-top: 10px;
 }
 
+
+
 .weatherCard {
     border-radius: 5px;
     border: white 0.75px solid;
+    /* margin: 0px 5px 15px 5px; */
+    
+}
+
+.col-md-8 {
+    /* padding: 0px 10px 15px 10px; */
 }
 
 
@@ -49,6 +57,8 @@ body {
 .btn-link {
     color: white;
     font-family: 'Kodchasan', sans-serif;
+    font-size: 20px;
+    
 }
 
 .btn-link:hover {
