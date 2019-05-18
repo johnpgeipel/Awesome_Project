@@ -16,4 +16,4 @@
 
 // Return and display 10 random beers with abvs within a range that matches the “Weather Severity Score”
 
-// Display name of beer, brewery, image (if exists), and description (if exists)  
+// Display name of beer, brewery, image (if exists), and description (if exists) ! 
