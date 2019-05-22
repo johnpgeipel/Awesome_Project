@@ -37,6 +37,7 @@ $(document).ready(function(){
         var clearSkies = false;
         var partCloudy = false;
         var heavyCloudy = false;
+        //test
 
         var userCity = $("#city-location").val();
 
