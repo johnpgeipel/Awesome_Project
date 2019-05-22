@@ -8,7 +8,7 @@ body {
     background-size: cover;
 }
 .jumbotron {
-    background: url("../images/jumbotron.jpg");
+    background: url("../images/jumbotron.gif");
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
@@ -61,6 +61,7 @@ body {
     border-radius: 5px;
     /* border: white 0.75px solid; */
     margin-bottom: 15px;
+    padding-bottom: 10px;
     
 }
 
@@ -85,7 +86,7 @@ form {
     border: 1px rgba(255, 255, 255, 0.50) solid;
     border-radius: 5px;
     padding: 20px;
-    margin-top: 5px;
+    margin-top: 10px 0px 10px 0px;
 }
 
 .col-md-8 {
