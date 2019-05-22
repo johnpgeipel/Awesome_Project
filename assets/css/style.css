@@ -14,6 +14,7 @@ body {
     color: white;
     /* border-bottom: white 0.75px solid; */
     border-bottom: darkslategray 0.75px solid;
+    padding-bottom: 100px;
 }
 
 .jumbotron h1 {
@@ -32,13 +33,18 @@ body {
     
 }
 
-.card-header, .weatherCard {
+.card-header, .weatherCard, .message {
     background-color: rgb(59, 53, 47);
     color: white;
     font-family: 'Kodchasan', sans-serif;
     padding-top: 10px;
     border-top: rgba(255, 255, 255, 0.50) 1px solid;
     
+}
+
+.message {
+    padding: 10px;
+    border-radius: 5px 5px 0px 0px;
 }
 
 .form-inline { 
