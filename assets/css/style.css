@@ -8,17 +8,19 @@ body {
     background-size: cover;
 }
 .jumbotron {
-    background: url("../images/jumbotron.jpg");
+    background: url("../images/jumbotron.gif");
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
-    border-bottom: white 0.75px solid;
+    /* border-bottom: white 0.75px solid; */
+    border-bottom: darkslategray 0.75px solid;
+    padding-bottom: 100px;
 }
 
 .jumbotron h1 {
     font-size: 70px;
     font-family: 'Kodchasan', sans-serif;
-    text-shadow: darkslategray 0px 0px 5px;
+    text-shadow: darkslategray 0px 0px 7px;
     
 }
 
@@ -27,37 +29,85 @@ body {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     text-shadow: darkslategray 0px 0px 6px;
+    letter-spacing: 2px;
     
 }
 
-.card-header, .weatherCard {
+.card-header, .weatherCard, .message {
     background-color: rgb(59, 53, 47);
     color: white;
     font-family: 'Kodchasan', sans-serif;
     padding-top: 10px;
+    border-top: rgba(255, 255, 255, 0.50) 1px solid;
+    
 }
+
+.message {
+    padding: 10px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.form-inline { 
+    display: inline;
+    flex-flow: row wrap;
+    align-items: center;
+ }
+
+ .form-inline input {
+    vertical-align: middle;
+ }
+
+/* .form-control { 
+     width: 50% !important; 
+ }  */
 
 
 
 .weatherCard {
     border-radius: 5px;
-    border: white 0.75px solid;
-    /* margin: 0px 5px 15px 5px; */
+    /* border: white 0.75px solid; */
+    margin-bottom: 15px;
+    padding-bottom: 10px;
     
+}
+
+.weather-display {
+    margin: 40px 0px 20px 0px;
+}
+
+label, .severity-header {
+    font-size: 20px;
+    text-align: left;
+    /* padding-right: 10px; */
+}
+
+form {
+    padding-top: 10px;
+}
+
+.severity-score {
+    font-size: 40px;
+    color: white;
+    font-family: 'Kodchasan', sans-serif;
+    border: 1px rgba(255, 255, 255, 0.50) solid;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 10px 0px 10px 0px;
 }
 
 .col-md-8 {
     /* padding: 0px 10px 15px 10px; */
 }
 
-
-
-
+.card {
+    border:  rgb(59, 53, 47) 0.75px solid;
+}
 
 .btn-link {
     color: white;
     font-family: 'Kodchasan', sans-serif;
     font-size: 20px;
+    
     
 }
 
@@ -68,10 +118,13 @@ body {
 #submit-btn {
     background-color: rgb(59, 53, 47);
     border-top: rgba(255, 255, 255, 0.493) 2px solid;
-    border-bottom: rgba(255, 255, 255, 0.219) 1px solid;
+    border-bottom: rgba(255, 255, 255, 0.20) 1px solid;
     border-left: none;
     border-right: none;
     margin-bottom: 15px;
+    margin-top: -55px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 
 #submit-btn:hover {
