@@ -35,7 +35,7 @@ body {
 
 .card-header, .weatherCard, .message {
     background-color: rgb(59, 53, 47);
-    color: white;
+    color: rgb(250, 242, 170);
     font-family: 'Kodchasan', sans-serif;
     padding-top: 10px;
     border-top: rgba(255, 255, 255, 0.50) 1px solid;
@@ -105,7 +105,7 @@ form {
 }
 
 .btn-link {
-    color: white;
+    color: rgb(250, 242, 170);
     font-family: 'Kodchasan', sans-serif;
     font-size: 20px;
     
