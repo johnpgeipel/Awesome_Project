@@ -46,6 +46,7 @@ body {
     padding: 10px;
     border-radius: 5px 5px 0px 0px;
     font-size: 20px;
+    
 }
 
 .form-inline { 
@@ -108,6 +109,7 @@ form {
     color: rgb(250, 242, 170);
     font-family: 'Kodchasan', sans-serif;
     font-size: 20px;
+    text-align: center !important;
     
     
 }
@@ -129,6 +131,20 @@ form {
 }
 
 #submit-btn:hover {
+    background-color: rgba(242, 159, 4, 1);
+ }
+
+ #confirm-btn {
+    background-color: rgb(59, 53, 47);
+    border-top: rgba(255, 255, 255, 0.493) 2px solid;
+    border-bottom: rgba(255, 255, 255, 0.20) 1px solid;
+    border-left: none;
+    border-right: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+#confirm-btn:hover {
     background-color: rgba(242, 159, 4, 1);
  }
 
