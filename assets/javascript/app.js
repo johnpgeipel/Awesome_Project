@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 
 // User submits location
@@ -49,8 +50,23 @@ $(document).ready(function(){
             if(weatherSeverity > weatherSeverityMax) {
                 weatherSeverityMax = weatherSeverity
                 console.log("This is the max weather severity: " + weatherSeverityMax)
+                $(".severity-score").html(weatherSeverityMax);
+                $(".message").html(weatherMessage[weatherSeverityMax])
             }
         }
+
+        
+            
+        $.getJSON(weatherQueryURL,function(json){
+            $("#city").html(json.name);
+            $("#main_weather").html(json.weather[0].main);
+            $("#description_weather").html(json.weather[0].description);
+            $("#weather_image").attr("src", "http://openweathermap.org/img/w/" + json.weather[0].icon + ".png");
+            $("#temperature").html(Math.floor(((json.main.temp) * (9/5)) - 459.67));
+            $("#humidity").html(json.main.humidity);
+            console.log(json)
+        });
+        
 
         $.ajax({url: weatherQueryURL,method: "GET"})
             .then(function(response) {
@@ -219,4 +235,4 @@ $(document).ready(function(){
 // Display name of beer, brewery, image (if exists), and description (if exists) ! 
 
     })
-})
+======
