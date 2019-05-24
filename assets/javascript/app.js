@@ -50,9 +50,9 @@ $(document).ready(function(){
 
         var apiKeyWeather = "833bd52e347bb8bdb8573f3eb16011cc";
         var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?q="+userCity+"&appid=" + apiKeyWeather;
-        var beerQueryURL = "https://api.punkapi.com/v2/beers?&per_page=80&abv_gt=" + lowABV + "&abv_lt=" + highABV;
         var lowABV;
         var highABV;
+        var beerQueryURL;
 // AJAX from Openweathermap API
 
         function setHighest() {
@@ -62,6 +62,17 @@ $(document).ready(function(){
                 $(".severity-score").html(weatherSeverityMax);
                 $(".message").html(weatherMessage[weatherSeverityMax])
             }
+        }
+
+        function setABVs() {
+            if(weatherSeverityMax === 1) {
+                lowABV = 2;
+                highABV = 3.9;
+            } else if (weatherSeverityMax > 1){
+                lowABV = weatherSeverityMax + 1.9;
+                highABV = weatherSeverityMax + 3;
+            }
+            beerQueryURL = "https://api.punkapi.com/v2/beers?&per_page=80&abv_gt=" + lowABV + "&abv_lt=" + highABV
         }
 
         
@@ -88,6 +99,7 @@ $(document).ready(function(){
                         clearSkies = true;
                         weatherSeverity = 1;
                         setHighest();
+                        setABVs();
                         console.log(clearSkies);
                         console.log("clearSkies");
                         console.log(weatherSeverity);
@@ -96,6 +108,7 @@ $(document).ready(function(){
                         partCloudy = true;
                         weatherSeverity = 2;
                         setHighest();
+                        setABVs();
                         console.log(partCloudy);
                         console.log("partCloudy");
                         console.log(weatherSeverity);
@@ -104,6 +117,7 @@ $(document).ready(function(){
                         heavyCloudy = true;
                         weatherSeverity = 3;
                         setHighest();
+                        setABVs();
                         console.log(heavyCloudy);
                         console.log("heavyCloudy");
                         console.log(weatherSeverity);
@@ -112,6 +126,7 @@ $(document).ready(function(){
                         lightDrizz = true;
                         weatherSeverity = 3;
                         setHighest();
+                        setABVs();
                         console.log(lightDrizz);
                         console.log("lightDrizz")
                         console.log(weatherSeverity);
@@ -120,6 +135,7 @@ $(document).ready(function(){
                         modDrizz = true;
                         weatherSeverity = 4;
                         setHighest();
+                        setABVs();
                         console.log(modDrizz);
                         console.log("modDrizz");
                         console.log(weatherSeverity);
@@ -128,6 +144,7 @@ $(document).ready(function(){
                         lightRain = true;
                         weatherSeverity = 4;
                         setHighest();
+                        setABVs();
                         console.log(lightRain);
                         console.log("lightRain");
                         console.log(weatherSeverity);
@@ -136,6 +153,7 @@ $(document).ready(function(){
                         regionalAtmo = true;
                         weatherSeverity = 4;
                         setHighest();
+                        setABVs();
                         console.log(regionalAtmo);
                         console.log("regionalAtmo");
                         console.log(weatherSeverity);
@@ -144,6 +162,7 @@ $(document).ready(function(){
                         sevDrizz = true;
                         weatherSeverity = 5;
                         setHighest();
+                        setABVs();
                         console.log(sevDrizz);
                         console.log("sevDrizz");
                         console.log(weatherSeverity);
@@ -152,6 +171,7 @@ $(document).ready(function(){
                         modRain = true;
                         weatherSeverity = 5;
                         setHighest();
+                        setABVs();
                         console.log(modRain);
                         console.log("modRain");
                         console.log(weatherSeverity);
@@ -160,6 +180,7 @@ $(document).ready(function(){
                         lightThun = true;
                         weatherSeverity = 5;
                         setHighest();
+                        setABVs();
                         console.log(lightThun);
                         console.log("lightThun");
                         console.log(weatherSeverity);
@@ -168,6 +189,7 @@ $(document).ready(function(){
                         modThun = true;
                         weatherSeverity = 6;
                         setHighest();
+                        setABVs();
                         console.log(modThun);
                         console.log("modThun");
                         console.log(weatherSeverity);
@@ -176,6 +198,7 @@ $(document).ready(function(){
                         sevRain = true;
                         weatherSeverity = 6;
                         setHighest();
+                        setABVs();
                         console.log(sevRain);
                         console.log("sevRain");
                         console.log(weatherSeverity);
@@ -184,6 +207,7 @@ $(document).ready(function(){
                         lightSnow = true;
                         weatherSeverity = 6;
                         setHighest();
+                        setABVs();
                         console.log(lightSnow);
                         console.log("lightSnow");
                         console.log(weatherSeverity);
@@ -192,6 +216,7 @@ $(document).ready(function(){
                         sevThun = true;
                         weatherSeverity = 7;
                         setHighest();
+                        setABVs();
                         console.log(sevThun);
                         console.log("sevThun");
                         console.log(weatherSeverity);
@@ -200,6 +225,7 @@ $(document).ready(function(){
                         modSnow = true;
                         weatherSeverity = 7;
                         setHighest();
+                        setABVs();
                         console.log(modSnow);
                         console.log("modSnow");
                         console.log(weatherSeverity);
@@ -208,6 +234,7 @@ $(document).ready(function(){
                         sevSnow = true;
                         weatherSeverity = 8;
                         setHighest();
+                        setABVs();
                         console.log(sevSnow);
                         console.log("sevSnow");
                         console.log(weatherSeverity);
@@ -216,6 +243,7 @@ $(document).ready(function(){
                         tornado = true;
                         weatherSeverity = 8;
                         setHighest();
+                        setABVs();
                         console.log(tornado);
                         console.log("tornado");
                         console.log(weatherSeverity);
@@ -233,13 +261,7 @@ $(document).ready(function(){
 
     $("#confirm-btn").on("click", function() {
         event.preventDefault();
-        if(weatherSeverityMax === 1) {
-            lowABV = 2;
-            highABV = 3.9;
-        } else if (weatherSeverityMax > 1){
-            lowABV = weatherSeverityMax + 1.9;
-            highABV = weatherSeverityMax + 3;
-        }
+            console.log("Beer URL: " + beerQueryURL);
         $.ajax({url: beerQueryURL, method: "GET"})
         .then(function(response) {
             console.log(response);}
