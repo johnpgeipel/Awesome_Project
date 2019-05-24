@@ -42,10 +42,17 @@ $(document).ready(function(){
 
         var userCity = $("#city-location").val();
 
-        var apiKeyWeather = "833bd52e347bb8bdb8573f3eb16011cc"
+        if (isNaN(userCity)) {
+            var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?q="+userCity+"&appid=" + apiKeyWeather;
+            } else {
+            var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?zip="+userCity+"&appid=" + apiKeyWeather;
+        }
 
-        
+        var apiKeyWeather = "833bd52e347bb8bdb8573f3eb16011cc";
         var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?q="+userCity+"&appid=" + apiKeyWeather;
+        var beerQueryURL = "https://api.punkapi.com/v2/beers?&per_page=80&abv_gt=" + lowABV + "&abv_lt=" + highABV;
+        var lowABV;
+        var highABV;
 // AJAX from Openweathermap API
 
         function setHighest() {
@@ -222,13 +229,22 @@ $(document).ready(function(){
             })
 
 
-// Create variable to hold “Weather Severity Score” (Scale of 1 to 9)
-	
-	// If, else if statements
-
-// Display “Weather Severity Score” to user
-
 // Depending on “Weather Severity Score”, sets an ABV Range variable
+
+    $("#confirm-btn").on("click", function() {
+        event.preventDefault();
+        if(weatherSeverityMax === 1) {
+            lowABV = 2;
+            highABV = 3.9;
+        } else if (weatherSeverityMax > 1){
+            lowABV = weatherSeverityMax + 1.9;
+            highABV = weatherSeverityMax + 3;
+        }
+        $.ajax({url: beerQueryURL, method: "GET"})
+        .then(function(response) {
+            console.log(response);}
+        )
+    })
 
 // AJAX from PunkAPI based on “abv” endpoint (ABV Range variable)
 
@@ -236,5 +252,7 @@ $(document).ready(function(){
 
 // Display name of beer, brewery, image (if exists), and description (if exists) ! 
 
+        })
+
     })
-})
+
