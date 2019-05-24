@@ -235,4 +235,3 @@ $(document).ready(function(){
 // Display name of beer, brewery, image (if exists), and description (if exists) ! 
 
     })
-======
