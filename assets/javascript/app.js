@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 
 // User submits location
@@ -234,4 +235,4 @@ $(document).ready(function(){
 // Display name of beer, brewery, image (if exists), and description (if exists) ! 
 
     })
-})
+======
