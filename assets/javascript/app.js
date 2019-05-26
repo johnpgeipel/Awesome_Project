@@ -264,15 +264,18 @@ $(document).ready(function(){
             console.log("Beer URL: " + beerQueryURL);
         $.ajax({url: beerQueryURL, method: "GET"})
         .then(function(response) {
-            console.log(response);}
+            console.log(response);
+        // From response, get 3 random beers
+            var beer1 = response[Math.floor(Math.random()*response.length)];
+            console.log(beer1);
+            var beer2 = response[Math.floor(Math.random()*response.length)];
+            console.log(beer2);
+            var beer3 = response[Math.floor(Math.random()*response.length)];
+            console.log(beer3);
+            }
         )
     })
 
-// AJAX from PunkAPI based on “abv” endpoint (ABV Range variable)
-
-// Return and display 10 random beers with abvs within a range that matches the “Weather Severity Score”
-
-// Display name of beer, brewery, image (if exists), and description (if exists) ! 
 
         })
 
