@@ -8,13 +8,13 @@ $(document).ready(function(){
         var weatherMessage = [
             "Nothing",
             "We see clear skies in your area! The weather seems to be nice and light. If this sounds right, click 'confirm' to see our recommended beers to match.",
-            "A few clouds in your area, but nothing to get depressed over. How about one of these beers to match?",
-            "We see some darker skies and maybe some drizzle. Bummer... how about one of these beers to match?",
-            "We see some rain or some regional weirdness in your area. It's okay to get a little weird. How about one of these beers?",
-            "We see heavy precipitation and some possible thunder in your area. Best to stay indoors with one of these beers!",
-            "We see some pretty heavy weather coming your way. Good time for a heavy beer. How about one of these?",
-            "We see some awful weather in your area. Unless you're into that kind of thing, we recommend shutting out the world with one of these high gravity beers.",
-            "There is either a blizzard or a tornado outside. If it's the former, we hope you have on of these beers already in your fridge. If it's the latter, we hope you have them in your basement."
+            "A few clouds in your area, but nothing to get depressed over. If this sounds right, click 'confirm' to see our recommended beers to match.",
+            "We see some darker skies and maybe some drizzle. Bummer... If this sounds right, click 'confirm' to see our recommended beers to match.",
+            "We see some rain or some regional weirdness in your area. It's okay to get a little weird. If this sounds right, click 'confirm' to see our recommended beers to match.",
+            "We see heavy precipitation and some possible thunder in your area. Best to stay indoors. If this sounds right, click 'confirm' to see our recommended beers to match.",
+            "We see some pretty heavy weather coming your way. Good time for a heavy beer. If this sounds right, click 'confirm' to see our recommended beers to match.",
+            "We see some awful weather in your area. Unless you're into that kind of thing, we recommend shutting out the world with some a little more high gravity. If this sounds right, click 'confirm' to see our recommended beers to match.",
+            "There is either a blizzard or a tornado outside. If it's the former, we hope you have on of these beers already in your fridge. If it's the latter, we hope you have them in your basement. If this sounds right, click 'confirm' to see our recommended beers to match."
         ]
 
         var weatherSeverity = 0;
@@ -50,9 +50,9 @@ $(document).ready(function(){
 
         var apiKeyWeather = "833bd52e347bb8bdb8573f3eb16011cc";
         var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?q="+userCity+"&appid=" + apiKeyWeather;
-        var beerQueryURL = "https://api.punkapi.com/v2/beers?&per_page=80&abv_gt=" + lowABV + "&abv_lt=" + highABV;
         var lowABV;
         var highABV;
+        var beerQueryURL;
 // AJAX from Openweathermap API
 
         function setHighest() {
@@ -62,6 +62,17 @@ $(document).ready(function(){
                 $(".severity-score").html(weatherSeverityMax);
                 $(".message").html(weatherMessage[weatherSeverityMax])
             }
+        }
+
+        function setABVs() {
+            if(weatherSeverityMax === 1) {
+                lowABV = 2;
+                highABV = 3.9;
+            } else if (weatherSeverityMax > 1){
+                lowABV = weatherSeverityMax + 1.9;
+                highABV = weatherSeverityMax + 3;
+            }
+            beerQueryURL = "https://api.punkapi.com/v2/beers?&per_page=80&abv_gt=" + lowABV + "&abv_lt=" + highABV
         }
 
         
@@ -88,144 +99,105 @@ $(document).ready(function(){
                         clearSkies = true;
                         weatherSeverity = 1;
                         setHighest();
-                        console.log(clearSkies);
-                        console.log("clearSkies");
-                        console.log(weatherSeverity);
+                        setABVs();
                     }
                     if (weather === 801 || weather === 802) {
                         partCloudy = true;
                         weatherSeverity = 2;
                         setHighest();
-                        console.log(partCloudy);
-                        console.log("partCloudy");
-                        console.log(weatherSeverity);
+                        setABVs();
                     }
                     if (weather === 803 || weather === 804) {
                         heavyCloudy = true;
                         weatherSeverity = 3;
                         setHighest();
-                        console.log(heavyCloudy);
-                        console.log("heavyCloudy");
-                        console.log(weatherSeverity);
+                        setABVs();
                     }
                     if(weather === 300 || weather === 310) {
                         lightDrizz = true;
                         weatherSeverity = 3;
                         setHighest();
-                        console.log(lightDrizz);
-                        console.log("lightDrizz")
-                        console.log(weatherSeverity);
+                        setABVs();
                     }
                     if (weather === 301 || weather === 311 || weather === 313 || weather === 321) {
                         modDrizz = true;
                         weatherSeverity = 4;
                         setHighest();
-                        console.log(modDrizz);
-                        console.log("modDrizz");
-                        console.log(weatherSeverity);
+                        setABVs();
                     }
                     if (weather === 500 || weather === 520) {
                         lightRain = true;
                         weatherSeverity = 4;
                         setHighest();
-                        console.log(lightRain);
-                        console.log("lightRain");
-                        console.log(weatherSeverity);
+                        setABVs();
                     }
                     if (weather >= 701 && weather <= 771) {
                         regionalAtmo = true;
                         weatherSeverity = 4;
                         setHighest();
-                        console.log(regionalAtmo);
-                        console.log("regionalAtmo");
-                        console.log(weatherSeverity);
+                        setABVs();
                     }
                     if (weather === 302 || weather === 312 || weather === 314) {
                         sevDrizz = true;
                         weatherSeverity = 5;
                         setHighest();
-                        console.log(sevDrizz);
-                        console.log("sevDrizz");
-                        console.log(weatherSeverity);
+                        setABVs();
                     }
                     if (weather === 501 || weather === 521 || weather === 531) {
                         modRain = true;
                         weatherSeverity = 5;
                         setHighest();
-                        console.log(modRain);
-                        console.log("modRain");
-                        console.log(weatherSeverity);
+                        setABVs();
                     }    
                     if(weather === 200 || weather === 210 || weather === 230 || weather === 231) {
                         lightThun = true;
                         weatherSeverity = 5;
                         setHighest();
-                        console.log(lightThun);
-                        console.log("lightThun");
-                        console.log(weatherSeverity);
+                        setABVs();
                     } 
                     if(weather === 201 || weather === 211 || weather === 232 || weather === 221) {
                         modThun = true;
                         weatherSeverity = 6;
                         setHighest();
-                        console.log(modThun);
-                        console.log("modThun");
-                        console.log(weatherSeverity);
+                        setABVs();
                     }
                     if (weather === 502 || weather === 503 || weather === 504 || weather === 511 || weather === 522) {
                         sevRain = true;
                         weatherSeverity = 6;
                         setHighest();
-                        console.log(sevRain);
-                        console.log("sevRain");
-                        console.log(weatherSeverity);
+                        setABVs();
                     }
                     if (weather === 600 || weather === 612 || weather === 615 || weather === 620) {
                         lightSnow = true;
                         weatherSeverity = 6;
                         setHighest();
-                        console.log(lightSnow);
-                        console.log("lightSnow");
-                        console.log(weatherSeverity);
+                        setABVs();
                     }   
                     if(weather === 202 || weather === 212) {
                         sevThun = true;
                         weatherSeverity = 7;
                         setHighest();
-                        console.log(sevThun);
-                        console.log("sevThun");
-                        console.log(weatherSeverity);
+                        setABVs();
                     } 
                     if (weather === 601 || weather === 611 || weather === 613 || weather === 616 || weather === 621) {
                         modSnow = true;
                         weatherSeverity = 7;
                         setHighest();
-                        console.log(modSnow);
-                        console.log("modSnow");
-                        console.log(weatherSeverity);
+                        setABVs();
                     } 
                     if (weather === 602 || weather === 622) {
                         sevSnow = true;
                         weatherSeverity = 8;
                         setHighest();
-                        console.log(sevSnow);
-                        console.log("sevSnow");
-                        console.log(weatherSeverity);
+                        setABVs();
                     } 
                     if (weather === 781) {
                         tornado = true;
                         weatherSeverity = 8;
                         setHighest();
-                        console.log(tornado);
-                        console.log("tornado");
-                        console.log(weatherSeverity);
+                        setABVs();
                     } 
-
-
-
-
                 }
-
             })
 
 
@@ -233,24 +205,24 @@ $(document).ready(function(){
 
     $("#confirm-btn").on("click", function() {
         event.preventDefault();
-        if(weatherSeverityMax === 1) {
-            lowABV = 2;
-            highABV = 3.9;
-        } else if (weatherSeverityMax > 1){
-            lowABV = weatherSeverityMax + 1.9;
-            highABV = weatherSeverityMax + 3;
-        }
-        $.ajax({url: beerQueryURL, method: "GET"})
-        .then(function(response) {
-            console.log(response);}
+            console.log("Beer URL: " + beerQueryURL);
+            $.ajax({url: beerQueryURL, method: "GET"})
+                .then(function(response) {
+                    console.log(response);
+        // From response, get 3 random beers
+                    var beer1 = response[Math.floor(Math.random()*response.length)];
+                        console.log(beer1);
+                        $("#recommend1").empty().append("<h5>" + beer1.name + "<h5>", "<p>" + beer1.description + "<p>");
+                    var beer2 = response[Math.floor(Math.random()*response.length)];
+                        console.log(beer2);
+                        $("#recommend2").empty().append("<h5>" + beer2.name + "<h5>", "<p>" + beer2.description + "<p>");
+                    var beer3 = response[Math.floor(Math.random()*response.length)];
+                        console.log(beer3);
+                        $("#recommend3").empty().append("<h5>" + beer3.name + "<h5>", "<p>" + beer3.description + "<p>");
+            }
         )
     })
 
-// AJAX from PunkAPI based on “abv” endpoint (ABV Range variable)
-
-// Return and display 10 random beers with abvs within a range that matches the “Weather Severity Score”
-
-// Display name of beer, brewery, image (if exists), and description (if exists) ! 
 
         })
 
