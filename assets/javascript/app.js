@@ -100,160 +100,104 @@ $(document).ready(function(){
                         weatherSeverity = 1;
                         setHighest();
                         setABVs();
-                        console.log(clearSkies);
-                        console.log("clearSkies");
-                        console.log(weatherSeverity);
                     }
                     if (weather === 801 || weather === 802) {
                         partCloudy = true;
                         weatherSeverity = 2;
                         setHighest();
                         setABVs();
-                        console.log(partCloudy);
-                        console.log("partCloudy");
-                        console.log(weatherSeverity);
                     }
                     if (weather === 803 || weather === 804) {
                         heavyCloudy = true;
                         weatherSeverity = 3;
                         setHighest();
                         setABVs();
-                        console.log(heavyCloudy);
-                        console.log("heavyCloudy");
-                        console.log(weatherSeverity);
                     }
                     if(weather === 300 || weather === 310) {
                         lightDrizz = true;
                         weatherSeverity = 3;
                         setHighest();
                         setABVs();
-                        console.log(lightDrizz);
-                        console.log("lightDrizz")
-                        console.log(weatherSeverity);
                     }
                     if (weather === 301 || weather === 311 || weather === 313 || weather === 321) {
                         modDrizz = true;
                         weatherSeverity = 4;
                         setHighest();
                         setABVs();
-                        console.log(modDrizz);
-                        console.log("modDrizz");
-                        console.log(weatherSeverity);
                     }
                     if (weather === 500 || weather === 520) {
                         lightRain = true;
                         weatherSeverity = 4;
                         setHighest();
                         setABVs();
-                        console.log(lightRain);
-                        console.log("lightRain");
-                        console.log(weatherSeverity);
                     }
                     if (weather >= 701 && weather <= 771) {
                         regionalAtmo = true;
                         weatherSeverity = 4;
                         setHighest();
                         setABVs();
-                        console.log(regionalAtmo);
-                        console.log("regionalAtmo");
-                        console.log(weatherSeverity);
                     }
                     if (weather === 302 || weather === 312 || weather === 314) {
                         sevDrizz = true;
                         weatherSeverity = 5;
                         setHighest();
                         setABVs();
-                        console.log(sevDrizz);
-                        console.log("sevDrizz");
-                        console.log(weatherSeverity);
                     }
                     if (weather === 501 || weather === 521 || weather === 531) {
                         modRain = true;
                         weatherSeverity = 5;
                         setHighest();
                         setABVs();
-                        console.log(modRain);
-                        console.log("modRain");
-                        console.log(weatherSeverity);
                     }    
                     if(weather === 200 || weather === 210 || weather === 230 || weather === 231) {
                         lightThun = true;
                         weatherSeverity = 5;
                         setHighest();
                         setABVs();
-                        console.log(lightThun);
-                        console.log("lightThun");
-                        console.log(weatherSeverity);
                     } 
                     if(weather === 201 || weather === 211 || weather === 232 || weather === 221) {
                         modThun = true;
                         weatherSeverity = 6;
                         setHighest();
                         setABVs();
-                        console.log(modThun);
-                        console.log("modThun");
-                        console.log(weatherSeverity);
                     }
                     if (weather === 502 || weather === 503 || weather === 504 || weather === 511 || weather === 522) {
                         sevRain = true;
                         weatherSeverity = 6;
                         setHighest();
                         setABVs();
-                        console.log(sevRain);
-                        console.log("sevRain");
-                        console.log(weatherSeverity);
                     }
                     if (weather === 600 || weather === 612 || weather === 615 || weather === 620) {
                         lightSnow = true;
                         weatherSeverity = 6;
                         setHighest();
                         setABVs();
-                        console.log(lightSnow);
-                        console.log("lightSnow");
-                        console.log(weatherSeverity);
                     }   
                     if(weather === 202 || weather === 212) {
                         sevThun = true;
                         weatherSeverity = 7;
                         setHighest();
                         setABVs();
-                        console.log(sevThun);
-                        console.log("sevThun");
-                        console.log(weatherSeverity);
                     } 
                     if (weather === 601 || weather === 611 || weather === 613 || weather === 616 || weather === 621) {
                         modSnow = true;
                         weatherSeverity = 7;
                         setHighest();
                         setABVs();
-                        console.log(modSnow);
-                        console.log("modSnow");
-                        console.log(weatherSeverity);
                     } 
                     if (weather === 602 || weather === 622) {
                         sevSnow = true;
                         weatherSeverity = 8;
                         setHighest();
                         setABVs();
-                        console.log(sevSnow);
-                        console.log("sevSnow");
-                        console.log(weatherSeverity);
                     } 
                     if (weather === 781) {
                         tornado = true;
                         weatherSeverity = 8;
                         setHighest();
                         setABVs();
-                        console.log(tornado);
-                        console.log("tornado");
-                        console.log(weatherSeverity);
                     } 
-
-
-
-
                 }
-
             })
 
 
@@ -262,16 +206,19 @@ $(document).ready(function(){
     $("#confirm-btn").on("click", function() {
         event.preventDefault();
             console.log("Beer URL: " + beerQueryURL);
-        $.ajax({url: beerQueryURL, method: "GET"})
-        .then(function(response) {
-            console.log(response);
+            $.ajax({url: beerQueryURL, method: "GET"})
+                .then(function(response) {
+                    console.log(response);
         // From response, get 3 random beers
-            var beer1 = response[Math.floor(Math.random()*response.length)];
-            console.log(beer1);
-            var beer2 = response[Math.floor(Math.random()*response.length)];
-            console.log(beer2);
-            var beer3 = response[Math.floor(Math.random()*response.length)];
-            console.log(beer3);
+                    var beer1 = response[Math.floor(Math.random()*response.length)];
+                        console.log(beer1);
+                        $("#recommend1").empty().append("<h5>" + beer1.name + "<h5>", "<p>" + beer1.description + "<p>");
+                    var beer2 = response[Math.floor(Math.random()*response.length)];
+                        console.log(beer2);
+                        $("#recommend2").empty().append("<h5>" + beer2.name + "<h5>", "<p>" + beer2.description + "<p>");
+                    var beer3 = response[Math.floor(Math.random()*response.length)];
+                        console.log(beer3);
+                        $("#recommend3").empty().append("<h5>" + beer3.name + "<h5>", "<p>" + beer3.description + "<p>");
             }
         )
     })
