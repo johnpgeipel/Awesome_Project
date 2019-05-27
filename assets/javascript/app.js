@@ -8,13 +8,13 @@ $(document).ready(function(){
         var weatherMessage = [
             "Nothing",
             "We see clear skies in your area! The weather seems to be nice and light. If this sounds right, click 'confirm' to see our recommended beers to match.",
-            "A few clouds in your area, but nothing to get depressed over. How about one of these beers to match?",
-            "We see some darker skies and maybe some drizzle. Bummer... how about one of these beers to match?",
-            "We see some rain or some regional weirdness in your area. It's okay to get a little weird. How about one of these beers?",
-            "We see heavy precipitation and some possible thunder in your area. Best to stay indoors with one of these beers!",
-            "We see some pretty heavy weather coming your way. Good time for a heavy beer. How about one of these?",
-            "We see some awful weather in your area. Unless you're into that kind of thing, we recommend shutting out the world with one of these high gravity beers.",
-            "There is either a blizzard or a tornado outside. If it's the former, we hope you have on of these beers already in your fridge. If it's the latter, we hope you have them in your basement."
+            "A few clouds in your area, but nothing to get depressed over. If this sounds right, click 'confirm' to see our recommended beers to match.",
+            "We see some darker skies and maybe some drizzle. Bummer... If this sounds right, click 'confirm' to see our recommended beers to match.",
+            "We see some rain or some regional weirdness in your area. It's okay to get a little weird. If this sounds right, click 'confirm' to see our recommended beers to match.",
+            "We see heavy precipitation and some possible thunder in your area. Best to stay indoors. If this sounds right, click 'confirm' to see our recommended beers to match.",
+            "We see some pretty heavy weather coming your way. Good time for a heavy beer. If this sounds right, click 'confirm' to see our recommended beers to match.",
+            "We see some awful weather in your area. Unless you're into that kind of thing, we recommend shutting out the world with some a little more high gravity. If this sounds right, click 'confirm' to see our recommended beers to match.",
+            "There is either a blizzard or a tornado outside. If it's the former, we hope you have on of these beers already in your fridge. If it's the latter, we hope you have them in your basement. If this sounds right, click 'confirm' to see our recommended beers to match."
         ]
 
         var weatherSeverity = 0;
