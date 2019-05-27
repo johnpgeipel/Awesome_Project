@@ -49,7 +49,7 @@ $(document).ready(function(){
         }
 
         var apiKeyWeather = "833bd52e347bb8bdb8573f3eb16011cc";
-        var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?q="+userCity+"&appid=" + apiKeyWeather;
+        // var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?q="+userCity+"&appid=" + apiKeyWeather;
         var lowABV;
         var highABV;
         var beerQueryURL;
