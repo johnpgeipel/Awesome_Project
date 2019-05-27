@@ -43,10 +43,8 @@ $(document).ready(function(){
         var userCity = $("#city-location").val();
 
         var apiKeyWeather = "833bd52e347bb8bdb8573f3eb16011cc"
-
-        
         var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?q="+userCity+"&appid=" + apiKeyWeather;
-// AJAX from Openweathermap API
+        // AJAX from Openweathermap API
 
         function setHighest() {
             if(weatherSeverity > weatherSeverityMax) {

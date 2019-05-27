@@ -77,9 +77,14 @@ body {
     margin: 40px 0px 20px 0px;
 }
 
+/* .col-lg-offset-2 {
+    
+} */
+
 label, .severity-header {
     font-size: 20px;
     text-align: left;
+    margin-bottom: 10px;
     /* padding-right: 10px; */
 }
 
