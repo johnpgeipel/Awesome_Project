@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Kodchasan&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300|Roboto" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     
@@ -23,12 +23,12 @@
 </head>
 <body>
         <div class="jumbotron text-center">
-            <h1>Daily POURcast</h1>
-            <h3>a site that recommends potables based on weather</h3>
+            <h1 class="animated bounceInDown">Daily POURcast</h1>
+            <h3 class="animated bounceInUp">a site that recommends potables based on weather</h3>
             
         </div>
         <div class="row">
-                <div class="container col-md-4 weatherCard">
+                <div class="container col-md-4 weatherCard animated bounceInLeft">
                   <form>
                     
                     <!-- <div class="form-inline">
@@ -45,11 +45,11 @@
                      
                   </form>
                     <div class="row">
-                        <div class="col-lg-12 col-lg-offset-2 text-center ">
+                        <div class="col-lg-12 col-lg-offset-2 text-center">
                           <h5>City: <span id="city"></span></h5>
                           <h5>Main Weather: <span id="main_weather"></span></h5>
                           <h5>Description: <span id="description_weather"></span></h5>
-                          <img id="weather_image" src="">
+                          <img class="icon" id="weather_image" src="">
                           <h5>Temperature: <span id="temperature"></span></h5>
                           <!-- <h5>pressure: <span id="pressure"></span></h5> -->
                           <h5>Humidity: <span id="humidity"></span></h5>
@@ -62,7 +62,7 @@
                     <div class="severity-score text-center"></div>
 
                 </div>
-                <div class="container col-md-8">
+                <div class="container col-md-8 animated bounceInRight">
                     <!-- <div class="message-container"> -->
                         <div class="card">
                             <div class="message"></div>
@@ -82,10 +82,8 @@
                               
                                   <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                     <div class="card-body" id="recommend1">
-                                      
-                                      
-                                      
                                     </div>
+                                    <!-- <div id="pic1"></div> -->
                                     
                                   </div>
                                 </div>

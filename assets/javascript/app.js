@@ -213,14 +213,14 @@ $(document).ready(function(){
                     var beer1 = response[Math.floor(Math.random()*response.length)];
                         console.log(beer1);
                         
-                        $("#recommend1").empty().append("<h5>" + beer1.name + "</h5>", "<p>" + beer1.description + "</p>");
-                        
+                        $("#recommend1").empty().append("<img src=" + beer1.image_url + ">" + "<h5>" + beer1.name + "</h5>", "<p>" + beer1.description + "</p>" + "<h6>ABV: " + beer1.abv + "</h6>");
+                        // $("#pic1").empty().append("<img src=" + beer1.image_url + ">");
                     var beer2 = response[Math.floor(Math.random()*response.length)];
                         console.log(beer2);
-                        $("#recommend2").empty().append("<h5>" + beer2.name + "</h5>", "<p>" + beer2.description + "</p>");
+                        $("#recommend2").empty().append("<img src=" + beer2.image_url + ">" + "<h5>" + beer2.name + "</h5>", "<p>" + beer2.description + "</p>" + "<h6>ABV: " + beer2.abv + "</h6>");
                     var beer3 = response[Math.floor(Math.random()*response.length)];
                         console.log(beer3);
-                        $("#recommend3").empty().append("<h5>" + beer3.name + "</h5>", "<p>" + beer3.description + "</p>");
+                        $("#recommend3").empty().append("<img src=" + beer3.image_url + ">" + "<h5>" + beer3.name + "</h5>", "<p>" + beer3.description + "</p>" + "<h6>ABV: " + beer3.abv + "</h6>");
             }
         )
     })
