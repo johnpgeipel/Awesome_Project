@@ -41,25 +41,19 @@ $(document).ready(function(){
         //test
 
         var userCity = $("#city-location").val();
-
-<<<<<<< HEAD
-        var apiKeyWeather = "833bd52e347bb8bdb8573f3eb16011cc"
-        var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?q="+userCity+"&appid=" + apiKeyWeather;
-        // AJAX from Openweathermap API
-=======
+        var apiKeyWeather = "833bd52e347bb8bdb8573f3eb16011cc";
         if (isNaN(userCity)) {
             var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?q="+userCity+"&appid=" + apiKeyWeather;
             } else {
             var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?zip="+userCity+"&appid=" + apiKeyWeather;
         }
 
-        var apiKeyWeather = "833bd52e347bb8bdb8573f3eb16011cc";
-        var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?q="+userCity+"&appid=" + apiKeyWeather;
+        // var apiKeyWeather = "833bd52e347bb8bdb8573f3eb16011cc";
+        // var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?q="+userCity+"&appid=" + apiKeyWeather;
         var lowABV;
         var highABV;
         var beerQueryURL;
 // AJAX from Openweathermap API
->>>>>>> fb9df3e5df98652aa0bdbe07ec3ba3d3e899f0f7
 
         function setHighest() {
             if(weatherSeverity > weatherSeverityMax) {
@@ -88,7 +82,7 @@ $(document).ready(function(){
             $("#main_weather").html(json.weather[0].main);
             $("#description_weather").html(json.weather[0].description);
             $("#weather_image").attr("src", "http://openweathermap.org/img/w/" + json.weather[0].icon + ".png");
-            $("#temperature").html(Math.floor(((json.main.temp) * (9/5)) - 459.67));
+            $("#temperature").html((Math.floor(((json.main.temp) * (9/5)) - 459.67)) + " º F");
             $("#humidity").html(json.main.humidity);
             console.log(json)
         });
@@ -218,13 +212,15 @@ $(document).ready(function(){
         // From response, get 3 random beers
                     var beer1 = response[Math.floor(Math.random()*response.length)];
                         console.log(beer1);
-                        $("#recommend1").empty().append("<h5>" + beer1.name + "<h5>", "<p>" + beer1.description + "<p>");
+                        
+                        $("#recommend1").empty().append("<h5>" + beer1.name + "</h5>", "<p>" + beer1.description + "</p>");
+                        
                     var beer2 = response[Math.floor(Math.random()*response.length)];
                         console.log(beer2);
-                        $("#recommend2").empty().append("<h5>" + beer2.name + "<h5>", "<p>" + beer2.description + "<p>");
+                        $("#recommend2").empty().append("<h5>" + beer2.name + "</h5>", "<p>" + beer2.description + "</p>");
                     var beer3 = response[Math.floor(Math.random()*response.length)];
                         console.log(beer3);
-                        $("#recommend3").empty().append("<h5>" + beer3.name + "<h5>", "<p>" + beer3.description + "<p>");
+                        $("#recommend3").empty().append("<h5>" + beer3.name + "</h5>", "<p>" + beer3.description + "</p>");
             }
         )
     })
