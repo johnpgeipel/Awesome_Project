@@ -181,6 +181,25 @@ form {
 
  }
 
+ #weather_image {
+     width: 75px;
+     height: auto;
+ }
+
+ img {
+     max-height: 150px;
+     width: auto;
+     float: left;
+     padding: 15px;
+     
+     
+ }
+
+ .icon {
+     float: none !important;
+     padding: none !important;
+ }
+
 
 
 
