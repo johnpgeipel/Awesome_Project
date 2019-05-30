@@ -5,6 +5,8 @@ $(document).ready(function(){
     $("#submit-btn").click("event", function() {
         event.preventDefault();
 
+        
+
         var weatherMessage = [
             "Nothing",
             "We see clear skies in your area! The weather seems to be nice and light. If this sounds right, click 'confirm' to see our recommended beers to match.",
@@ -54,6 +56,9 @@ $(document).ready(function(){
         var highABV;
         var beerQueryURL;
 // AJAX from Openweathermap API
+        
+        $("#city-location").val("Enter city or zipcode");
+
 
         function setHighest() {
             if(weatherSeverity > weatherSeverityMax) {
@@ -206,6 +211,9 @@ $(document).ready(function(){
     $("#confirm-btn").on("click", function() {
         event.preventDefault();
             console.log("Beer URL: " + beerQueryURL);
+
+            
+            
             $.ajax({url: beerQueryURL, method: "GET"})
                 .then(function(response) {
                     console.log(response);
@@ -231,12 +239,13 @@ $(document).ready(function(){
                     if (!beer3.image_url) {
                         $("#recommend3").empty().append("<img src='assets/images/empty-bottle.png'>" + "<h5>" + beer3.name + "</h5>" + "<h6>ABV: " + beer3.abv + "</h6>", "<p>" + beer3.description + "</p>");
                     };
+                    
             }
         )
     })
-
+    
 
         })
-
+        
     })
 
