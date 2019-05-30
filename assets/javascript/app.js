@@ -221,6 +221,16 @@ $(document).ready(function(){
                     var beer3 = response[Math.floor(Math.random()*response.length)];
                         console.log(beer3);
                         $("#recommend3").empty().append("<img src=" + beer3.image_url + ">" + "<h5>" + beer3.name + "</h5>" + "<h6>ABV: " + beer3.abv + "</h6>", "<p>" + beer3.description + "</p>");
+
+                    if (!beer1.image_url) {
+                            $("#recommend1").empty().append("<img src='assets/images/empty-bottle.png'>" + "<h5>" + beer1.name + "</h5>" + "<h6>ABV: " + beer1.abv + "</h6>", "<p>" + beer1.description + "</p>");
+                        };
+                    if (!beer2.image_url) {
+                        $("#recommend2").empty().append("<img src='assets/images/empty-bottle.png'>" + "<h5>" + beer2.name + "</h5>" + "<h6>ABV: " + beer2.abv + "</h6>", "<p>" + beer2.description + "</p>");
+                    };
+                    if (!beer3.image_url) {
+                        $("#recommend3").empty().append("<img src='assets/images/empty-bottle.png'>" + "<h5>" + beer3.name + "</h5>" + "<h6>ABV: " + beer3.abv + "</h6>", "<p>" + beer3.description + "</p>");
+                    };
             }
         )
     })
