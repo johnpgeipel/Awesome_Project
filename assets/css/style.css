@@ -1,5 +1,18 @@
 
 
+
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    
+    
+  }
+#content-wrap {
+    padding-bottom: 2.5rem;   
+}
+
 .row {
     margin: 0px 15px 50px 15px;
 }
@@ -197,14 +210,7 @@ form {
 
 
 
-#page-container {
-    position: relative;
-    min-height: 100vh;
-    
-  }
-#content-wrap {
-padding-bottom: 2.5rem;    /* Footer height */
-}
+
 
  @media screen and (max-width: 400px) {
     .jumbotron h1 {
