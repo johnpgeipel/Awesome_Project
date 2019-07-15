@@ -1,13 +1,14 @@
 # Daily POURcast
-### [Project Link](https://johnpgeipel.github.io/Awesome_Project/)
-
-### [Powerpoint Download Link](https://github.com/johnpgeipel/Awesome_Project/blob/master/Daily%20POURcast.pptx?raw=true)
+#### Rain or Shine, We've got the perfect beer for you!
+* [Project Link](https://johnpgeipel.github.io/Awesome_Project/)
+* [YouTube Link](https://www.youtube.com/watch?v=4_V07mbG834&feature=youtu.be)
+* [Powerpoint Download Link](https://github.com/johnpgeipel/Awesome_Project/blob/master/Daily%20POURcast.pptx?raw=true)
 
 ## Team Members:
-* Christian Livick
-* Joe Dorau
-* Bryan Thusius
-* John Geipel
+* [Christian Livick](https://github.com/cclivick)
+* [Joe Dorau](https://github.com/joedorau)
+* [Bryan Thusius](https://github.com/bryanthuz)
+* [John Geipel](https://github.com/johnpgeipel)
 
 
 ## Project Description:
