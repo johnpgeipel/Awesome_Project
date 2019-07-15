@@ -11,9 +11,9 @@
 
 
 ## Project Description:
-Our application utilizes the weather forecast data for a user's location and recommends three beers of appropriate potency. For instance, if the forecast is **sunny and warm**, perhaps a **light shandy or pilsner**. If the weather is **dreary or soggy**, try a **Barley Wine or a Barrel-Aged Porter**.
+Our application utilizes the weather forecast data for a user's location and recommends three beers of appropriate potency. For instance, if the forecast is **sunny and warm**, perhaps a **Light Shandy or Pilsner**. If the weather is **dreary or soggy**, try a **Barley Wine or a Barrel-Aged Porter**.
 
-We hope to incorporate a news web-scraping function in the future. The user would be able to click on the daily news articles to read brief abstracts of the day’s news. This will provide the user with a better understanding of why they were recommended a particular beer. 
+ In the future, we hope to incorporate a news web-scraping function. The user would be able to click on the daily news articles to read brief abstracts of the day’s news in addition to the local forecast. This will provide the user with a better understanding of why they were recommended these particular beers. 
 
 ## Technologies Used:
 HTML, CSS, Bootstrap, Javascript, JQuery, API's, AJAX & JSON. 
