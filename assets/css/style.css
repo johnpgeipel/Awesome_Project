@@ -1,12 +1,40 @@
-.row {
-    margin: 0px 10px 0px 10px;
+
+
+
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    
+    
+  }
+#content-wrap {
+    padding-bottom: 2.5rem;   
 }
+
+.row {
+    margin: 0px 15px 50px 15px;
+}
+
+.col-md-8 {
+    padding: 0px 5px;
+}
+
+
 
 body {
     background: url("../images/table2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position:center;
+    min-height: 100vh;
+    
 }
+
+
+
+
 .jumbotron {
     background: url("../images/jumbotron.gif");
     background-repeat: no-repeat;
@@ -58,10 +86,6 @@ body {
  .form-inline input {
     vertical-align: middle;
  }
-
-/* .form-control { 
-     width: 50% !important; 
- }  */
 
 
 
@@ -128,6 +152,8 @@ form {
     margin-top: -55px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
+    z-index: 99;
+    position: relative;
 }
 
 #submit-btn:hover {
@@ -147,6 +173,78 @@ form {
 #confirm-btn:hover {
     background-color: rgba(242, 159, 4, 1);
  }
+
+ .card-body {
+     padding: 0px;
+ }
+
+ p, h5 {
+     padding: 5px 5px 5px 5px;
+     margin: 0px 10px;
+ }
+
+ p {
+     padding-bottom: 10px;
+ }
+
+ h5, .message {
+     color: rgb(251, 177, 40);
+ }
+
+ #footer {
+    background-color: rgb(36, 35, 35);
+    height: 50px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    line-height: 40px;
+    
+    color: rgb(250, 242, 170);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+
+
+
+ @media screen and (max-width: 400px) {
+    .jumbotron h1 {
+        font-size: 50px;
+    }
+
+    .jumbotron h3 {
+        font-size: 15px;
+    }
+
+    .btn-link {
+        font-size: 15px;
+    }
+
+ }
+
+ #weather_image {
+     width: 75px;
+     height: auto;
+ }
+
+ img {
+     max-height: 150px;
+     width: auto;
+     float: left;
+     padding: 15px;
+     
+     
+ }
+
+ .icon {
+     float: none !important;
+     padding: none !important;
+ }
+
+ 
 
 
 /* Color Theme Swatches in Hex */
