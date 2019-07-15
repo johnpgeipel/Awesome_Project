@@ -3,7 +3,7 @@
 
 ### [Powerpoint Download Link](https://github.com/johnpgeipel/Awesome_Project/blob/master/Daily%20POURcast.pptx?raw=true)
 
-### Team Members:
+## Team Members:
 * Christian Livick
 * Joe Dorau
 * Bryan Thusius
