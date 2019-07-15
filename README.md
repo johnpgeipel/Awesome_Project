@@ -17,6 +17,11 @@ HTML, CSS, Bootstrap, Javascript, JQuery, API's, AJAX,
 ## API’s Used:
 We used an API called “Punk API” for the information regarding beer potency and type. For the weather forecasts, we used the openweather API. 
 
+## Screenshots
+![Landing Page](assets/images/project_one.PNG)
+
+![Landing Page](assets/images/project_two.PNG)
+
 ## Breakdown of Tasks:
 Gather API data, analyze JSON, etc.
 Create user interface
